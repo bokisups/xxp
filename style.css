@@ -1,0 +1,145 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body #header {
+  height: 150px;
+  left: 0;
+  top: 0;
+  right: 0;
+  background-color: #ebebeb;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+}
+body #header .logo {
+  width: 140px;
+  padding-top: 20px;
+  padding-left: 30px;
+}
+body #search_nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body #search_nav #search_box {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  align-content: flex-end;
+}
+body #search_nav #search_box input {
+  background-color: white;
+  border: none;
+  outline: none;
+  height: 30px;
+  text-align: center;
+}
+body #search_nav #search_box button {
+  color: white;
+  margin-top: 10px;
+  border: none;
+  background-color: #2face3;
+  height: 30px;
+}
+body .login_window {
+  display: flex;
+  width: 200px;
+  padding: 10px;
+  flex-direction: column;
+  align-items: flex-end;
+}
+body .login_window input[type=text] {
+  margin: 5px;
+  border: none;
+  outline: none;
+  height: 30px;
+}
+body .login_window input[type=password] {
+  margin: 5px;
+  border: none;
+  outline: none;
+  height: 30px;
+}
+body .login_window input[value=Login] {
+  display: flexbox;
+  color: white;
+  background-color: #e97920;
+  height: 30px;
+  width: 180px;
+  border: none;
+  padding-top: 5px;
+  align-self: flex-end;
+}
+body .login_window input[value=Register] {
+  color: #2face3;
+  border: none;
+  padding-top: 5px;
+  padding-left: 25px;
+  background-color: #ebebeb;
+  align-self: center;
+}
+body .nav {
+  margin-top: 30px;
+  list-style: none;
+}
+body .nav a {
+  color: #2face3;
+  text-decoration: none;
+  padding-right: 20px;
+  height: 20px;
+}
+body .nav a:hover {
+  color: #e97920;
+}
+body #co_wrapper {
+  display: flex;
+  margin-top: 140px;
+  width: 100%;
+  bottom: auto;
+  background-color: #d9d9d9;
+}
+body #co_wrapper .co_name {
+  margin-top: 0px;
+}
+body #co_wrapper .co_short {
+  position: relative;
+  margin: 30px;
+  width: 350px;
+  height: 250px;
+  background-color: #ebebeb;
+  box-sizing: border-box;
+  padding: 20px;
+}
+body #co_wrapper .co_short h5 {
+  margin-top: 40px;
+}
+body #co_wrapper .co_short h5 li {
+  list-style: none;
+  margin-top: 20px;
+}
+body #co_wrapper .co_short h5 span {
+  margin: 10px;
+}
+body #co_wrapper .co_short h5 .rate_bar {
+  height: 10px;
+  background-color: white;
+  display: block;
+}
+body #co_wrapper .co_short a {
+  background-color: #484848;
+  color: white;
+  text-decoration: none;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  height: 30px;
+  width: 100%;
+  padding-top: 5px;
+  text-align: center;
+}
+body #co_wrapper .co_short small {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #2face3;
+}/*# sourceMappingURL=style.css.map */
