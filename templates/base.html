@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>X-XPerience</title>
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+
+</head>
+<body>
+<header>
+    <section id="header">
+        <div>
+        <img class="logo" src="{{url_for('static', filename='images/xxplogo.svg')}}" alt="x-xp-erience">
+    </div>
+   
+   
+    <div id="search_nav"><!--company search and add square-->
+    <form id="search_box">
+        <input type="search" placeholder="Isci podjetje..." name="searchbox">
+        <button>DODAJ PODJETJE</button>
+    </form>
+        
+        <nav class="nav">
+            <li>
+                <a href="/">DOMOV</a>
+                <a href="/podjetja">PODJETJA</a>
+                <a href="/komentarji">KOMENTARJI</a>
+                <a href="/kontakt">KONTAKT</a>
+            </li>
+        </nav>
+    </div>
+    <form class="login_window" method="post" action="{{url_for('login')}}">
+        <input type="text" placeholder="e-mail adress" name="username">
+        <input type="password" placeholder="password" name="password">
+        <input type="hidden" name="csrf_token" value="{{csrf_token()}}">
+        <input type="submit" value="Login">
+        <a href="{{ url_for('login_google') }}" id="google-login-button">Sign in with Google</a>
+        <a href="{{url_for('register')}}">Register</a>
+    </form>
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div id="flash-messages">
+                <ul class="flashes">
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+    {% endwith %}
+
+
+    </section>
+
+
+</header>
+
+<div id="content">
+    {% block content %}{% endblock content %}
+</div>
+<footer><h2>Designing and developing is in progress.</h2></footer>
+
+
+
+</body>
+
+
+
+
+
+</html>
